@@ -59,6 +59,15 @@ section{padding:92px 24px;position:relative}.wrap{max-width:1160px;margin:auto}.
 .moon-finale-caption h2{font-size:clamp(1.6rem,4vw,2.8rem);color:#d59aff;text-shadow:0 0 18px #a93dff;margin:14px 0}
 .moon-finale-caption p{color:#c7b1d9;margin:0}
 @media(max-width:600px){.moon-finale{min-height:590px}.moon-finale .violet-moon{top:13%}.moon-finale .moon-ring{top:calc(13% + 135px)}}
+
+/* Fond noir profond sur toutes les sections, contraste violet conservé. */
+html,body,main{background-color:#000!important}
+body:before{background:none!important}
+.hero,.hero:before{background:#000!important}
+main>section:not(.moon-finale),main>.divider{background-color:#000}
+#storm-clouds{opacity:.46}
+.moon-finale{background:radial-gradient(ellipse at 50% 38%,#10051b 0%,#030105 48%,#000 80%)!important}
+.moon-finale .moon-haze{opacity:.55}
 </style></head><body>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="entry-card"><div class="entry-icon" aria-hidden="true">ϟ</div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l'obscurité. Une légende portée par la foudre.</p><button id="enter" class="pill">Entrer dans les archives ↗</button><div class="entry-note">Expérience visuelle • Éclairs animés</div></div></div>
