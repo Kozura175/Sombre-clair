@@ -94,9 +94,9 @@ body{min-height:100svh}main>.divider{display:none!important}
 main>.hero,main>section{display:none!important}
 main>.hero.current-page{display:grid!important}
 main>section.current-page{display:block!important;min-height:calc(100svh - 145px);padding-top:50px;padding-bottom:75px;animation:pageReveal .45s ease both}
-body.page-home{overflow:hidden}
-body.page-home main>.hero.current-page{height:calc(100svh - 68px);min-height:0;padding-top:35px;padding-bottom:65px;overflow:hidden}
-body.page-home footer{display:none}
+body.page-home{overflow-x:hidden;overflow-y:auto}
+body.page-home main>.hero.current-page{height:auto;min-height:calc(100svh - 68px);padding-top:90px;padding-bottom:125px;overflow:visible}
+body.page-home footer{display:block}
 body.page-home .hero-mark{bottom:20px}
 @keyframes pageReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .links a{position:relative;white-space:nowrap;transition:color .2s}
@@ -120,7 +120,7 @@ main>section.current-page .card:hover{transform:translateY(-4px);border-color:#a
 }
 @media(max-width:650px){
 main>section.current-page{padding-top:24px;padding-bottom:45px}
-body.page-home main>.hero.current-page{padding:30px 14px 65px}
+body.page-home main>.hero.current-page{padding:75px 14px 115px}
 body.page-home .hero-mark{font-size:9px}
 .excellence-panel{margin-top:15px}
 }
