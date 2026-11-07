@@ -92,7 +92,7 @@ main>section:not(.moon-finale),main>.divider{background-color:#000}
 /* Navigation immersive par catégorie */
 body{min-height:100svh}main>.divider{display:none!important}
 main>.hero,main>section{display:none!important}
-main>.hero.current-page{display:grid!important}
+main>.hero.current-page{display:grid!important}body.page-home .home-explore{display:block!important}
 main>section.current-page{display:block!important;min-height:calc(100svh - 145px);padding-top:50px;padding-bottom:75px;animation:pageReveal .45s ease both}
 body.page-home{overflow-x:hidden;overflow-y:auto}
 body.page-home main>.hero.current-page{height:auto;min-height:calc(100svh - 68px);padding-top:90px;padding-bottom:125px;overflow:visible}
@@ -125,11 +125,45 @@ body.page-home .hero-mark{font-size:9px}
 .excellence-panel{margin-top:15px}
 }
 @media(prefers-reduced-motion:reduce){main>section.current-page{animation:none!important}.card{transition:none!important}}
+
+/* Grande page d'accueil : découverte par défilement */
+.home-explore{display:none;position:relative;z-index:2;max-width:1220px;margin:0 auto;padding:75px 24px 115px}
+body.page-home .home-explore{display:block}
+.home-explore:before{content:"";position:absolute;top:0;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,#ae6bff88,transparent)}
+.home-explore-head{text-align:center;max-width:740px;margin:0 auto 42px}
+.home-explore-head>span{font:700 11px Outfit,sans-serif;letter-spacing:.32em;color:#c58bff}
+.home-explore-head h2{font:700 clamp(29px,4.8vw,53px) Cinzel,serif;margin:18px 0;color:#f1e3ff;text-shadow:0 0 35px #b26eff55}
+.home-explore-head p{color:#b9a8ca;line-height:1.8}
+.home-explore-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.home-explore-grid a{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:230px;padding:27px;border:1px solid #63418488;border-radius:14px;background:radial-gradient(ellipse at 95% 0%,#6d31a31b,transparent 75%),linear-gradient(145deg,#150d21,#090711);box-shadow:0 12px 35px #0005;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+.home-explore-grid a:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(transparent,#b477ff,transparent);opacity:.45}
+.home-explore-grid a:hover{transform:translateY(-6px);border-color:#c38bff;box-shadow:0 18px 45px #7c34c535}
+.home-explore-icon{font-size:29px;color:#c98dff;text-shadow:0 0 20px #a75bff77;margin-bottom:20px}
+.home-explore-grid small{font-size:10px;font-weight:700;letter-spacing:.19em;color:#aa84c9}
+.home-explore-grid strong{font:600 23px Cinzel,serif;color:#f2e4ff;margin:10px 0}
+.home-explore-grid em{font-style:normal;font-size:13px;color:#b5a3c5}
+.home-explore-grid b{position:absolute;right:24px;bottom:22px;color:#d4a5ff;font-size:23px;font-weight:400}
+.home-explore-quote{text-align:center;margin:65px 0 0;color:#a87ec7;letter-spacing:.16em;font:500 clamp(13px,2vw,18px) Cinzel,serif}
+#entry button:focus-visible,.home-explore-grid a:focus-visible{outline:2px solid #e6c5ff;outline-offset:4px}
+@media(max-width:850px){.home-explore-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.home-explore{padding:55px 17px 75px}.home-explore-grid{grid-template-columns:1fr;gap:13px}.home-explore-grid a{min-height:170px;padding:22px}.home-explore-icon{margin-bottom:8px}.home-explore-quote{margin-top:45px}}
+@media(prefers-reduced-motion:reduce){.home-explore-grid a{transition:none!important}}
 </style></head><body>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="entry-card"><div class="entry-icon" aria-hidden="true">ϟ</div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l'obscurité. Une légende portée par la foudre.</p><button id="enter" class="pill">Entrer dans les archives ↗</button><div class="entry-note">Expérience visuelle • Éclairs animés</div></div></div>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><a href="#entrainements">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#katanas">Katanas</a><a href="#rapports">Rapports</a></div></nav></header>
 <main><div class="hero" id="accueil"><div class="hero-inner"><div class="emblem" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M60 5L20 55h30L38 95 84 38H53Z" fill="#d1a0ff" stroke="#fff1ff" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="eyebrow">La puissance des ténèbres</div><h1>SOMBRE<span>ÉCLAIR</span></h1><p>Une puissance fulgurante surgie de l'obscurité. Un univers de mystère, de détermination et d'ambition, où chaque éclair annonce une nouvelle ère.</p><a class="pill" href="#sommaire">Explorer les archives ↗</a></div><div class="excellence-panel" aria-label="Excellence du Sombre Éclair"><span>✦ EXCELLENCE DU SOMBRE ÉCLAIR ✦</span><strong>Excellence 5</strong></div><div class="recipient-panel" aria-label="Destinataire du site"><span class="recipient-label">✦ DESTINATAIRE ✦</span><strong>Excellence 5</strong><span class="recipient-role">Excellence du Sombre Éclair</span><strong>Yumeko</strong><span class="recipient-role">Co-gérante du Sombre Éclair</span></div><div class="hero-mark">✦ L'OMBRE PRÉCÈDE LA FOUDRE ✦</div></div>
+<div class="home-explore" aria-label="Explorer les archives">
+<div class="home-explore-head"><span>ϟ &nbsp; LES ARCHIVES</span><h2>Explorez le Sombre Éclair</h2><p>Une puissance forgée dans les ténèbres. Choisissez un registre pour découvrir son histoire.</p></div>
+<div class="home-explore-grid">
+<a href="#identite"><span class="home-explore-icon">♛</span><small>01 / LE PORTEUR</small><strong>Yuna</strong><em>Identité et ambitions</em><b aria-hidden="true">↗</b></a>
+<a href="#pouvoir"><span class="home-explore-icon">ϟ</span><small>02 / L'ESSENCE</small><strong>Le pouvoir</strong><em>Foudre et ténèbres</em><b aria-hidden="true">↗</b></a>
+<a href="#entrainements"><span class="home-explore-icon">⚔</span><small>03 / LA MAÎTRISE</small><strong>Entraînements</strong><em>Progression et discipline</em><b aria-hidden="true">↗</b></a>
+<a href="#patrouilles"><span class="home-explore-icon">◈</span><small>04 / LE TERRAIN</small><strong>Patrouilles</strong><em>Journal des missions</em><b aria-hidden="true">↗</b></a>
+<a href="#katanas"><span class="home-explore-icon">✧</span><small>05 / LES TROPHÉES</small><strong>Katanas</strong><em>Registre des lames</em><b aria-hidden="true">↗</b></a>
+<a href="#rapports"><span class="home-explore-icon">◇</span><small>06 / LES DOCUMENTS</small><strong>Rapports</strong><em>Archives officielles</em><b aria-hidden="true">↗</b></a>
+</div><p class="home-explore-quote">« L'ombre précède la foudre. »</p>
+</div>
 <div class="divider"></div><section id="sommaire"><div class="wrap"><div class="kicker">01 / NAVIGATION</div><h2 class="title">Sommaire des archives</h2><p class="lead">Accède aux différentes rubriques du Sombre Éclair.</p><div class="summary-grid">
 <a class="tile" href="#identite"><span class="symbol">ϟ</span><strong>Identité</strong><small>La nature du Sombre Éclair.</small></a><a class="tile" href="#pouvoir"><span class="symbol">⚡</span><strong>Le pouvoir</strong><small>La foudre et les ténèbres.</small></a><a class="tile" href="#parcours"><span class="symbol">✦</span><strong>Parcours</strong><small>Les étapes de son histoire.</small></a><a class="tile" href="#entrainements"><span class="symbol">♜</span><strong>Entraînements</strong><small>Les séances et les épreuves RP.</small></a><a class="tile" href="#patrouilles"><span class="symbol">◈</span><strong>Patrouilles</strong><small>Les événements sur le terrain.</small></a><a class="tile" href="#katanas"><span class="symbol">⚔</span><strong>Katanas de pourfendeurs</strong><small>Les lames récupérées et leurs archives RP.</small></a><a class="tile" href="#rapports"><span class="symbol">▤</span><strong>Rapports</strong><small>Les archives officielles RP.</small></a>
 </div></div></section><div class="divider"></div>
@@ -141,7 +175,7 @@ body.page-home .hero-mark{font-size:9px}
 <section id="katanas"><div class="wrap"><div class="kicker">07 / KATANAS DE POURFENDEURS</div><h2 class="title">Les lames des pourfendeurs</h2><p class="lead">Un registre dédié aux katanas récupérés au fil des événements RP du Sombre Éclair.</p><div class="grid"><article class="card"><div class="icon">⚔</div><h3>Katanas récupérés</h3><p>Aucun katana enregistré pour le moment.</p></article><article class="card"><div class="icon">ϟ</div><h3>Origines</h3><p>Souffle, rang et ancien propriétaire des lames seront archivés ici.</p></article><article class="card"><div class="icon">◆</div><h3>Collection</h3><p>Les nouvelles récupérations seront ajoutées à ce registre.</p></article></div></div></section><div class="divider"></div>
 <section id="rapports"><div class="wrap"><div class="final"><div class="kicker">08 / ARCHIVES OFFICIELLES</div><h2>Rapports du Sombre Éclair</h2><p>Aucun rapport enregistré pour le moment. Cet espace accueillera les futurs documents, événements et récits RP.</p><a class="pill" href="#sommaire">Retour au sommaire ↑</a></div></div></section></main><footer><strong>ϟ LE SOMBRE ÉCLAIR</strong>Les ténèbres révèlent la foudre.<br>Site RP non officiel.</footer>
 <script>
-(()=>{const entry=document.getElementById('entry'),enter=document.getElementById('enter');enter.addEventListener('click',()=>{entry.classList.add('hidden');document.body.style.overflow='';});document.body.style.overflow='hidden';const btn=document.getElementById('navbutton'),links=document.getElementById('navlinks');btn.addEventListener('click',()=>{const open=links.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'✕':'☰'});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰'}));
+(()=>{const entry=document.getElementById('entry'),enter=document.getElementById('enter');enter.addEventListener('click',()=>{entry.classList.add('hidden');entry.setAttribute('aria-hidden','true');document.body.style.overflow='';document.querySelector('.brand')?.focus();});document.body.style.overflow='hidden';enter.focus();const btn=document.getElementById('navbutton'),links=document.getElementById('navlinks');btn.addEventListener('click',()=>{const open=links.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'✕':'☰'});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰'}));
 if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 const cloudCanvas=document.getElementById('storm-clouds'),cloudCtx=cloudCanvas.getContext('2d');let cloudShapes=[];
 function cloudResize(){const dpr=Math.min(devicePixelRatio||1,2);cloudCanvas.width=Math.round(innerWidth*dpr);cloudCanvas.height=Math.round(innerHeight*dpr);cloudCtx.setTransform(dpr,0,0,dpr,0,0);const cw=innerWidth,ch=innerHeight;cloudShapes=[];for(let layer=0;layer<3;layer++){const count=layer===0?58:layer===1?48:34;for(let i=0;i<count;i++){cloudShapes.push({x:Math.random()*cw*1.4-cw*.2,y:Math.random()*ch*1.2-ch*.1,r:(85+Math.random()*165)*(layer===0?1.4:1),alpha:(.065+Math.random()*.095)*(layer===2?.8:1),drift:(.6+Math.random()*1.4)*(layer%2?1:-1),tone:layer===0?110:layer===1?80:53})}}}
