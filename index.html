@@ -272,6 +272,8 @@ html{scroll-padding-top:80px}
 @keyframes nameLuster{0%,100%{filter:brightness(1)}50%{filter:brightness(1.4)}}
 @keyframes nameUnderline{0%,100%{opacity:.45;transform:scaleX(.65)}50%{opacity:1;transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.name-glimmer,.name-glimmer:after{animation:none!important}}
+/* Retire les traits et symboles lumineux parasites en arrière-plan, sans toucher à l'emblème */
+#lightning,#sparks,#flash{display:none!important}
 </style></head><body>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="entry-card"><div class="entry-icon" aria-hidden="true">ϟ</div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l'obscurité. Une légende portée par la foudre.</p><button id="enter" class="pill">Entrer dans les archives ↗</button><div class="entry-note">Expérience visuelle • Éclairs animés</div></div></div>
