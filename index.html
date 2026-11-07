@@ -148,6 +148,20 @@ body.page-home .home-explore{display:block}
 @media(max-width:850px){.home-explore-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.home-explore{padding:55px 17px 75px}.home-explore-grid{grid-template-columns:1fr;gap:13px}.home-explore-grid a{min-height:170px;padding:22px}.home-explore-icon{margin-bottom:8px}.home-explore-quote{margin-top:45px}}
 @media(prefers-reduced-motion:reduce){.home-explore-grid a{transition:none!important}}
+
+/* Emblème électrique et titre de l'Excellence */
+.emblem{position:relative;isolation:isolate;animation:emblemRadiance 3.6s ease-in-out infinite,emblemFloat 5s ease-in-out infinite}
+.emblem:before{content:"";position:absolute;inset:-13px;border-radius:50%;border:1px solid #d9a5ff99;box-shadow:0 0 18px #ba65ff88,inset 0 0 18px #ab53ff55;animation:emblemHalo 3.6s ease-in-out infinite;pointer-events:none}
+.emblem:after{content:"";position:absolute;inset:-30px;border-radius:50%;background:radial-gradient(circle,#a448ff40,transparent 70%);filter:blur(10px);z-index:-1;animation:emblemAura 3.6s ease-in-out infinite;pointer-events:none}
+.emblem svg{filter:drop-shadow(0 0 11px #f2c9ff) drop-shadow(0 0 27px #b451ff);animation:boltShine 2.8s ease-in-out infinite}
+@keyframes emblemRadiance{0%,100%{box-shadow:0 0 38px #7b30c48c,0 0 75px #8b2fe64a,inset 0 0 25px #a54bff38}50%{box-shadow:0 0 60px #c779ffdd,0 0 125px #a340ff99,inset 0 0 40px #c78aff80}}
+@keyframes emblemFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes emblemHalo{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.08)}}
+@keyframes emblemAura{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes boltShine{0%,100%{filter:drop-shadow(0 0 9px #e9c1ff) drop-shadow(0 0 22px #a94dff)}50%{filter:drop-shadow(0 0 19px #fff) drop-shadow(0 0 42px #ce7aff)}}
+.excellence-panel strong,.recipient-panel strong:first-of-type{color:#f8e9ff;text-shadow:0 0 8px #fff9,0 0 20px #c476ff,0 0 38px #a43dff;animation:excellenceGlow 3s ease-in-out infinite}
+@keyframes excellenceGlow{0%,100%{text-shadow:0 0 8px #fff7,0 0 18px #b96dff,0 0 35px #8b34ff}50%{text-shadow:0 0 12px #fff,0 0 28px #db9aff,0 0 55px #af47ff,0 0 78px #8b34ff}}
+@media(prefers-reduced-motion:reduce){.emblem,.emblem:before,.emblem:after,.emblem svg,.excellence-panel strong,.recipient-panel strong:first-of-type{animation:none!important}}
 </style></head><body>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="entry-card"><div class="entry-icon" aria-hidden="true">ϟ</div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l'obscurité. Une légende portée par la foudre.</p><button id="enter" class="pill">Entrer dans les archives ↗</button><div class="entry-note">Expérience visuelle • Éclairs animés</div></div></div>
