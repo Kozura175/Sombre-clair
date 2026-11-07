@@ -77,6 +77,16 @@ main>section:not(.moon-finale),main>.divider{background-color:#000}
 .pill:hover{box-shadow:0 0 17px #b24affaa,0 0 43px #8420e766}
 @keyframes electro-ring{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.hero .emblem:before,.hero .emblem:after{animation:none}}
+
+/* Emblème néon violet : cœur électrique lumineux, halo respirant et reflets. */
+.hero .emblem{z-index:1;width:154px;height:154px;border:2px solid #d390ff;background:radial-gradient(circle at 46% 38%,#6e20b8 0%,#29094b 38%,#07020e 78%);box-shadow:0 0 16px #e6b2ff,0 0 42px #ae3fff,0 0 105px #8520ecb8,inset 0 0 30px #ad40ff8c,inset 0 0 7px #f0c9ff;animation:emblem-neon 3.6s ease-in-out infinite}
+.hero .emblem svg{width:94px;height:94px;overflow:visible;filter:drop-shadow(0 0 5px #fff) drop-shadow(0 0 14px #d68cff) drop-shadow(0 0 29px #a32cff);animation:bolt-neon 2.8s ease-in-out infinite}
+.hero .emblem svg path{fill:#eac0ff;stroke:#fff;stroke-width:2.6}
+.hero .emblem:before{inset:-14px;border:2px solid #d28bffb0;box-shadow:0 0 15px #b14bff,0 0 35px #9d31f9aa;animation:electro-ring 5s linear infinite}
+.hero .emblem:after{inset:-27px;border:1px dashed #b865ffb3;box-shadow:0 0 17px #a43fff7a;animation:electro-ring 12s linear infinite reverse}
+@keyframes emblem-neon{0%,100%{box-shadow:0 0 16px #e6b2ff,0 0 42px #ae3fff,0 0 95px #8520ec9c,inset 0 0 30px #ad40ff8c,inset 0 0 7px #f0c9ff}50%{box-shadow:0 0 24px #fff,0 0 62px #cb69ff,0 0 145px #a72dffdb,inset 0 0 43px #c166ffb8,inset 0 0 13px #fff}}
+@keyframes bolt-neon{0%,100%{filter:drop-shadow(0 0 5px #fff) drop-shadow(0 0 14px #d68cff) drop-shadow(0 0 29px #a32cff)}50%{filter:drop-shadow(0 0 10px #fff) drop-shadow(0 0 25px #e4a4ff) drop-shadow(0 0 46px #b62fff)}}
+@media(prefers-reduced-motion:reduce){.hero .emblem,.hero .emblem svg{animation:none}}
 </style></head><body>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="entry-card"><div class="entry-icon" aria-hidden="true">ϟ</div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l'obscurité. Une légende portée par la foudre.</p><button id="enter" class="pill">Entrer dans les archives ↗</button><div class="entry-note">Expérience visuelle • Éclairs animés</div></div></div>
