@@ -610,6 +610,20 @@ footer{border-top:1px solid #6c408b77}
 #pouvoir .shiyo-gallery .shiyo-photo:first-child img{object-fit:cover;object-position:center center}
 #pouvoir .shiyo-gallery .shiyo-photo:nth-child(2) img{object-fit:cover;object-position:center center}
 @media(max-width:420px){#pouvoir .shiyo-gallery .shiyo-photo{height:220px}}
+
+/* Énergie du Sombre Éclair autour des deux affiches */
+#pouvoir .shiyo-gallery{position:relative;isolation:isolate;padding:16px 12px 22px;overflow:visible}
+#pouvoir .shiyo-gallery::before{content:"";position:absolute;z-index:-1;inset:-18px -10px;background:radial-gradient(ellipse at 22% 55%,rgba(155,59,255,.23),transparent 47%),radial-gradient(ellipse at 80% 42%,rgba(118,47,222,.24),transparent 50%);filter:blur(18px);pointer-events:none;animation:shiyo-ambient 7s ease-in-out infinite alternate}
+#pouvoir .shiyo-gallery .shiyo-photo{overflow:hidden;box-shadow:0 0 0 1px #c28bf544,0 0 18px #a34aff55,0 16px 36px #000c;animation:shiyo-border-pulse 4.8s ease-in-out infinite alternate}
+#pouvoir .shiyo-gallery .shiyo-photo:nth-child(2){animation-delay:-2.4s}
+#pouvoir .shiyo-gallery .shiyo-photo::before{content:"";position:absolute;z-index:3;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(120deg,transparent 18%,rgba(240,194,255,.13) 27%,transparent 37%);background-size:260% 100%;background-position:120% 0;animation:shiyo-glint 8s ease-in-out infinite}
+#pouvoir .shiyo-gallery .shiyo-photo:nth-child(2)::before{animation-delay:-4s}
+#pouvoir .shiyo-gallery .shiyo-photo:hover{transform:translateY(-5px);box-shadow:0 0 0 1px #e5bdff9c,0 0 32px #bb66ff99,0 20px 40px #000d}
+#pouvoir .shiyo-gallery .shiyo-photo:focus-visible{outline:3px solid #eac5ff;outline-offset:4px}
+@keyframes shiyo-border-pulse{from{box-shadow:0 0 0 1px #c28bf544,0 0 14px #9a48ff44,0 16px 36px #000c}to{box-shadow:0 0 0 1px #e1b6ff8c,0 0 28px #a94aff8c,0 16px 36px #000c}}
+@keyframes shiyo-glint{0%,68%,100%{background-position:120% 0}82%{background-position:-140% 0}}
+@keyframes shiyo-ambient{from{opacity:.65;transform:scale(.98)}to{opacity:1;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){#pouvoir .shiyo-gallery::before,#pouvoir .shiyo-gallery .shiyo-photo,#pouvoir .shiyo-gallery .shiyo-photo::before{animation:none}#pouvoir .shiyo-gallery .shiyo-photo:hover{transform:none}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="portal-mist portal-mist-one" aria-hidden="true"></div><div class="portal-mist portal-mist-two" aria-hidden="true"></div><div class="entry-card"><div class="portal-frame" aria-hidden="true"><div class="portal-glow"></div><div class="portal-ring"></div><div class="portal-core">ϟ</div></div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l’obscurité. Une légende portée par la foudre.</p><button id="enter" class="pill portal-enter">Entrer dans le domaine <span aria-hidden="true">✦</span></button><div class="entry-note">Le domaine du Sombre Éclair vous attend</div></div></div>
