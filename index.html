@@ -1,5 +1,5 @@
 
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#030307"><meta name="description" content="Archives de du Sombre Éclair : Seth, Excellence 5 (Shiyo), entraînements, patrouilles, katanas et rapports."><meta name="color-scheme" content="dark"><meta property="og:title" content="Sombre Éclair | Archives démoniaques"><meta property="og:description" content="Découvrez les archives du pouvoir de du Sombre Éclair."><meta property="og:type" content="website"><title>Sombre Éclair | Archives démoniaques</title><style>
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#030307"><meta name="description" content="Archives du Sombre Éclair : Seth, Excellence 5 (Shiyo), entraînements, patrouilles, katanas et rapports."><meta name="color-scheme" content="dark"><meta property="og:title" content="Sombre Éclair | Archives démoniaques"><meta property="og:description" content="Découvrez les archives du pouvoir du Sombre Éclair."><meta property="og:type" content="website"><title>Sombre Éclair | Archives démoniaques</title><style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap');
 :root{--bg:#000000;--panel:#0b0912;--border:#31213f;--purple:#ac6dff;--purple2:#6825c1;--white:#f3eafa;--muted:#b6a8c3;--gold:#e7c48b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#000;color:var(--white);font-family:Outfit,Arial,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:transparent;z-index:-1}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}#lightning{position:fixed;inset:0;pointer-events:none;z-index:30;width:100%;height:100%}#flash{position:fixed;inset:0;pointer-events:none;z-index:29;background:radial-gradient(ellipse at 50% 20%,#aa77ff77,transparent 75%);opacity:0} .hero.shock{animation:thunder-shock .28s ease-out 1}@keyframes thunder-shock{0%,100%{transform:translate(0,0)}18%{transform:translate(-2px,1px)}38%{transform:translate(2px,-1px)}58%{transform:translate(-1px,1px)}78%{transform:translate(2px,-1px)}}#sparks{position:fixed;inset:0;pointer-events:none;z-index:0;width:100%;height:100%}#storm-clouds{position:fixed;inset:0;pointer-events:none;z-index:1;width:100%;height:100%;opacity:.92}main,header,footer{position:relative}header{position:sticky}
 header{position:sticky;top:0;z-index:20;background:#040408eb;border-bottom:1px solid #352145;backdrop-filter:blur(14px)}.nav{max-width:1200px;margin:auto;padding:17px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font:800 17px Cinzel,serif;letter-spacing:.13em;color:#e5c8ff}.links{display:flex;gap:21px;flex-wrap:wrap}.links a{font-size:13px;color:#bdaece}.links a:hover{color:#eacfff}.navbutton{display:none;background:#100a1a;color:#fff;border:1px solid #4b3162;border-radius:8px;padding:9px 13px}
@@ -701,6 +701,34 @@ footer{border-top:1px solid #6c408b77}
 #quartier-general .hq-pill{display:inline-block;font-size:11px;letter-spacing:.18em;color:#e1b8ff;border:1px solid #8048ad;padding:7px 15px;border-radius:50px}
 @media(max-width:680px){#quartier-general .hq-form{grid-template-columns:1fr}#quartier-general .hq-stats{grid-template-columns:repeat(2,1fr)}#quartier-general .hq-tabs button{flex:1 1 40%}}
 @media(prefers-reduced-motion:reduce){#quartier-general *{transition:none!important}}
+
+/* SETH RP COMMAND CENTER V2 */
+#arsenal-rp{position:relative;background:radial-gradient(circle at 12% 0%,#28103d 0%,transparent 34%),radial-gradient(circle at 85% 100%,#17082a 0%,transparent 38%),#030207;padding:80px 0}
+#arsenal-rp:before{content:"";position:absolute;top:0;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,#b565fa,transparent);box-shadow:0 0 25px #a44aff}
+#arsenal-rp .arsenal-head{text-align:center;max-width:800px;margin:0 auto 36px}
+#arsenal-rp .arsenal-head h2{font:900 clamp(2rem,5vw,4rem) Cinzel,serif;color:#f1d7ff;text-shadow:0 0 20px #8d37cf}
+#arsenal-rp .arsenal-head p{color:#cdb3de;line-height:1.7}
+#arsenal-rp .arsenal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#arsenal-rp .arsenal-card{min-width:0;padding:25px;background:linear-gradient(145deg,#1b0e2b,#0b0613);border:1px solid #75439a;border-radius:20px;box-shadow:0 15px 40px #0008;transition:transform .2s,border-color .2s}
+#arsenal-rp .arsenal-card:hover{transform:translateY(-4px);border-color:#c88cff}
+#arsenal-rp .arsenal-card h3{color:#e4b7ff;margin:10px 0}
+#arsenal-rp .arsenal-card p{color:#bfa9d0;line-height:1.6;font-size:14px}
+#arsenal-rp .arsenal-card .arsenal-symbol{font-size:30px;color:#e3b0ff;text-shadow:0 0 20px #a14fff}
+#arsenal-rp label{display:block;font-size:13px;color:#d9c1ed;margin:13px 0 6px}
+#arsenal-rp input,#arsenal-rp select,#arsenal-rp textarea{display:block;width:100%;padding:11px;border-radius:9px;border:1px solid #6a3c91;background:#0a0512;color:#f5eaff;font:inherit;min-width:0}
+#arsenal-rp textarea{min-height:85px;resize:vertical}
+#arsenal-rp button{border:1px solid #bd82ee;background:linear-gradient(110deg,#57218a,#27113f);border-radius:10px;color:#fff;padding:11px 15px;cursor:pointer;margin-top:15px;font:600 14px Outfit,Arial,sans-serif}
+#arsenal-rp button:hover{background:#7737ad}
+#arsenal-rp .arsenal-output{white-space:pre-wrap;overflow-wrap:anywhere;min-height:80px;border-radius:10px;border:1px solid #4b286d;background:#090511;padding:13px;font-size:13px;line-height:1.7;margin-top:16px;color:#eee0fb}
+#arsenal-rp .arsenal-status{color:#d7a5ff;min-height:20px;font-size:12px;margin-top:8px}
+#arsenal-rp .mission-check{display:flex;gap:9px;align-items:flex-start;margin:12px 0;color:#d9c2ed;font-size:14px}
+#arsenal-rp .mission-check input{width:auto;flex:none;margin-top:3px}
+#arsenal-rp .mission-progress{height:9px;background:#1d0c30;border:1px solid #67338c;border-radius:50px;overflow:hidden;margin-top:15px}
+#arsenal-rp .mission-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#8a30df,#e1a8ff);box-shadow:0 0 18px #ac53ff;transition:width .3s}
+#arsenal-rp .arsenal-note{text-align:center;color:#ae9abf;font-size:12px;margin-top:22px}
+@media(max-width:950px){#arsenal-rp .arsenal-grid{grid-template-columns:1fr 1fr}#arsenal-rp .arsenal-card:last-child{grid-column:1/-1}}
+@media(max-width:600px){#arsenal-rp .arsenal-grid{grid-template-columns:1fr}#arsenal-rp .arsenal-card:last-child{grid-column:auto}#arsenal-rp{padding:55px 0}}
+@media(prefers-reduced-motion:reduce){#arsenal-rp *{transition:none!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="portal-mist portal-mist-one" aria-hidden="true"></div><div class="portal-mist portal-mist-two" aria-hidden="true"></div><div class="entry-card"><div class="portal-frame" aria-hidden="true"><div class="portal-glow"></div><div class="portal-ring"></div><div class="portal-core"><svg viewBox="0 0 100 100" role="img" aria-label="Emblème du Sombre Éclair" style="width:66px;height:66px;filter:drop-shadow(0 0 10px #e2b7ff)"><path d="M60 5L20 55h30L38 95 84 38H53Z" fill="#f1dcff" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></svg></div></div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l’obscurité. Une légende portée par la foudre noire.</p><button id="enter" class="pill portal-enter">Entrer dans le domaine <span aria-hidden="true">✦</span></button><div class="entry-note">Le domaine du Sombre Éclair vous attend</div></div></div>
@@ -754,6 +782,32 @@ footer{border-top:1px solid #6c408b77}
 <div class="hq-actions"><button type="button" id="hq-generate-incident">Préparer le signalement</button><button type="button" id="hq-copy-incident">Copier</button></div><pre class="hq-output" id="hq-incident-output">Le signalement apparaîtra ici.</pre><p class="hq-status" id="hq-incident-status" aria-live="polite"></p></div></div>
 <div class="hq-pane" id="hq-archives" role="tabpanel"><div class="hq-panel"><h3>Sauvegarde de tes archives</h3><p>Exporte tes activités dans un fichier JSON, ou importe une sauvegarde précédente.</p><div class="hq-actions"><button type="button" id="hq-export">Exporter les activités</button><label style="display:inline-flex;align-items:center;cursor:pointer">Importer un fichier JSON<input id="hq-import" type="file" accept=".json,application/json" style="max-width:260px"></label></div><p class="hq-note">Les informations restent sur cet appareil. Pense à exporter régulièrement : vider les données du navigateur peut supprimer le journal. Le registre n'est pas synchronisé entre appareils.</p><p id="hq-archive-status" class="hq-status" aria-live="polite"></p></div></div>
 </div></section><div class="divider"></div>
+
+<section id="arsenal-rp"><div class="wrap">
+<div class="arsenal-head"><span class="hq-pill">✦ OUTILS DE TERRAIN ✦</span><h2>Arsenal RP</h2><p>Prépare tes événements, entraîne les jeunes démons et organise tes missions sans quitter les archives du Sombre Éclair.</p></div>
+<div class="arsenal-grid">
+<div class="arsenal-card"><div class="arsenal-symbol">ϟ</div><h3>Annonce d'entraînement</h3><p>Génère une annonce claire pour les démons du serveur.</p>
+<label for="ar-training">Discipline</label><select id="ar-training"><option>Griffe</option><option>Oratoire</option><option>Griffe et Oratoire</option><option>Mêlée générale</option></select>
+<label for="ar-ranks">Rangs concernés</label><input id="ar-ranks" value="E à B" maxlength="50">
+<label for="ar-place">Lieu</label><input id="ar-place" value="Mur de patrouille" maxlength="80">
+<label for="ar-hour">Heure (facultative)</label><input id="ar-hour" type="time">
+<label class="mission-check"><input id="ar-mandatory" type="checkbox" checked> Présence obligatoire</label>
+<button type="button" id="ar-generate-training">Créer l'annonce</button><button type="button" id="ar-copy-training">Copier</button><div class="arsenal-output" id="ar-training-output" aria-live="polite">Ton annonce apparaîtra ici.</div><div class="arsenal-status" id="ar-training-status"></div></div>
+<div class="arsenal-card"><div class="arsenal-symbol">◈</div><h3>Épreuve d'oratoire</h3><p>Des sujets pour entraîner la répartie et l'argumentation en RP.</p>
+<label for="ar-topic">Choisir un sujet</label><select id="ar-topic"><option value="0">Loyauté envers l'Ordre</option><option value="1">Discipline et respect</option><option value="2">Force et stratégie</option><option value="3">Responsabilité d'un démon</option><option value="4">Le rôle des Excellences</option><option value="5">Confiance et mérite</option></select>
+<button type="button" id="ar-topic-generate">Préparer l'épreuve</button><button type="button" id="ar-copy-topic">Copier</button><div class="arsenal-output" id="ar-topic-output" aria-live="polite">Le sujet apparaîtra ici.</div><div class="arsenal-status" id="ar-topic-status"></div></div>
+<div class="arsenal-card"><div class="arsenal-symbol">⚑</div><h3>Préparation de mission</h3><p>Une checklist rapide avant de partir en patrouille ou en mission.</p>
+<label for="ar-mission-name">Nom de la mission</label><input id="ar-mission-name" placeholder="Patrouille du soir" maxlength="100">
+<div id="ar-mission-checks">
+<label class="mission-check"><input type="checkbox"> Objectif RP défini</label>
+<label class="mission-check"><input type="checkbox"> Participants informés</label>
+<label class="mission-check"><input type="checkbox"> Lieu de rendez-vous fixé</label>
+<label class="mission-check"><input type="checkbox"> Règles du serveur respectées</label>
+<label class="mission-check"><input type="checkbox"> Rapport et preuves à préparer</label>
+</div>
+<div class="mission-progress"><span id="ar-mission-bar"></span></div><p id="ar-mission-count">0 / 5 étapes préparées</p>
+<button type="button" id="ar-mission-generate">Créer la fiche mission</button><button type="button" id="ar-copy-mission">Copier</button><div class="arsenal-output" id="ar-mission-output" aria-live="polite">Ta fiche mission apparaîtra ici.</div><div class="arsenal-status" id="ar-mission-status"></div></div>
+</div><p class="arsenal-note">Ces outils fonctionnent directement dans ton navigateur, sans compte supplémentaire.</p></div></section>
 <section id="rapports"><div class="wrap"><div class="final"><div class="kicker">08 / ARCHIVES OFFICIELLES</div><h2>Rapports de du Sombre Éclair</h2><p>Aucun rapport enregistré pour le moment. Cet espace accueillera les futurs documents, événements et récits RP.</p><a class="pill" href="#sommaire">Retour au sommaire ↑</a></div></div></section></main><button type="button" id="back-to-top" class="back-to-top" aria-label="Revenir en haut de page" title="Revenir en haut">↑</button><footer><strong>ϟ SOMBRE ÉCLAIR</strong>Les ténèbres libèrent la foudre.<br>Site RP non officiel.</footer>
 <script>
 (()=>{const entry=document.getElementById('entry'),enter=document.getElementById('enter');if(sessionStorage.getItem('sombre-eclair-entered')==='yes'){entry.classList.add('hidden');entry.setAttribute('aria-hidden','true');document.body.style.overflow='';}enter.addEventListener('click',()=>{try{sessionStorage.setItem('sombre-eclair-entered','yes')}catch(e){}entry.classList.add('hidden');entry.setAttribute('aria-hidden','true');document.body.style.overflow='';if(location.hash&&document.querySelector(location.hash)){requestAnimationFrame(()=>document.querySelector(location.hash).scrollIntoView({behavior:'instant',block:'start'}))}else{document.querySelector('.brand')?.focus()}});if(!entry.classList.contains('hidden')){document.body.style.overflow='hidden';enter.focus()}const btn=document.getElementById('navbutton'),links=document.getElementById('navlinks');btn.addEventListener('click',()=>{const open=links.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'✕':'☰'});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰'}));
@@ -838,6 +892,31 @@ $('hq-copy-incident').addEventListener('click',()=>copy($('hq-incident-output').
 $('hq-export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(items,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='archives-seth-rp.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);$('hq-archive-status').textContent='Export préparé.'});
 $('hq-import').addEventListener('change',async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;try{if(f.size>2000000)throw Error('Fichier trop volumineux');const data=JSON.parse(await f.text());if(!Array.isArray(data))throw Error('Format invalide');items=data.filter(x=>x&&typeof x.date==='string'&&typeof x.type==='string'&&typeof x.desc==='string').slice(-500).map(x=>({id:Date.now()+'-'+Math.random().toString(36).slice(2),date:x.date.slice(0,20),type:x.type.slice(0,60),desc:x.desc.slice(0,1200)}));save();render();$('hq-archive-status').textContent=items.length+' activités importées.'}catch(err){$('hq-archive-status').textContent='Import impossible : '+err.message}e.target.value=''});
 render();
+})();
+</script>
+
+<script>
+(function(){
+'use strict';
+const root=document.getElementById('arsenal-rp');if(!root)return;
+const $=id=>document.getElementById(id);
+const safe=id=>$(id).value.trim();
+async function copy(output,status){try{await navigator.clipboard.writeText($(output).textContent);$(status).textContent='Copié !'}catch(e){$(status).textContent='Sélectionne le texte pour le copier.'}}
+$('ar-generate-training').addEventListener('click',()=>{$('ar-training-output').textContent='⚡ ANNONCE — ENTRAÎNEMENT ⚡\n\nDiscipline : '+safe('ar-training')+'\nDémons concernés : rangs '+(safe('ar-ranks')||'à préciser')+'\nLieu : '+(safe('ar-place')||'à préciser')+($('ar-hour').value?'\nHeure : '+$('ar-hour').value:'')+'\nParticipation : '+($('ar-mandatory').checked?'OBLIGATOIRE':'sur inscription')+'\n\nRassemblement demandé. Respectez les consignes des responsables.\n\n— Seth, Sombre Éclair';$('ar-training-status').textContent='Annonce prête.'});
+$('ar-copy-training').addEventListener('click',()=>copy('ar-training-output','ar-training-status'));
+const topics=[
+['Un démon doit-il obéir sans jamais questionner un ordre ?','Défends une position en 60 secondes, puis réponds à une objection.'],
+['La discipline est-elle plus importante que la puissance ?','Donne deux arguments et un exemple tiré d’une situation RP.'],
+['Vaut-il mieux être puissant seul ou efficace en groupe ?','Compare les avantages et les limites des deux approches.'],
+['Quelles qualités doit posséder un démon responsable ?','Présente trois qualités et explique comment les démontrer.'],
+['Comment les Excellences inspirent-elles l’Ordre démoniaque ?','Construis un discours structuré et respectueux.'],
+['Le mérite dépend-il du rang ou des actes ?','Défends ton point de vue avec un exemple précis.']
+];
+$('ar-topic-generate').addEventListener('click',()=>{const t=topics[Number($('ar-topic').value)]||topics[0];$('ar-topic-output').textContent='ÉPREUVE D’ORATOIRE\n\nSujet : '+t[0]+'\n\nConsigne : '+t[1]+'\n\nCritères : clarté, cohérence, respect et répartie.\n\n— Seth, Sombre Éclair';$('ar-topic-status').textContent='Épreuve prête.'});
+$('ar-copy-topic').addEventListener('click',()=>copy('ar-topic-output','ar-topic-status'));
+const checks=[...root.querySelectorAll('#ar-mission-checks input')];function progress(){const n=checks.filter(c=>c.checked).length;$('ar-mission-count').textContent=n+' / '+checks.length+' étapes préparées';$('ar-mission-bar').style.width=(n/checks.length*100)+'%'}checks.forEach(c=>c.addEventListener('change',progress));
+$('ar-mission-generate').addEventListener('click',()=>{$('ar-mission-output').textContent='FICHE DE MISSION — SOMBRE ÉCLAIR\n\nMission : '+(safe('ar-mission-name')||'Sans titre')+'\nResponsable : Seth (rang E)\n\nPRÉPARATION\n'+checks.map(c=>(c.checked?'[X] ':'[ ] ')+c.parentElement.textContent.trim()).join('\n')+'\n\nCompte rendu à compléter après la mission.';$('ar-mission-status').textContent='Fiche prête.'});
+$('ar-copy-mission').addEventListener('click',()=>copy('ar-mission-output','ar-mission-status'));progress();
 })();
 </script>
 </body></html>
