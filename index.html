@@ -704,6 +704,34 @@ h1 span{font-size:clamp(.9rem,2.3vw,1.5rem)!important;letter-spacing:.33em!impor
 #pouvoir .card:first-child:after{content:"☣";position:absolute;right:20px;top:15px;color:#b5ff4366;font-size:40px}
 ::selection{background:#9ee83b;color:#091408}
 @media(prefers-reduced-motion:reduce){.hero-inner:before,.hero-inner:after{animation:none!important}}
+
+/* ACIDE V2 — largeur intégrale, direction artistique immersive */
+html{background:#07170b!important}
+body,main{background:#07170b!important;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 12%,#a1ff2e24,transparent 60%),radial-gradient(ellipse at 10% 70%,#42bf3535,transparent 50%),radial-gradient(ellipse at 90% 70%,#66d92c24,transparent 52%)!important}
+main{position:relative;isolation:isolate}
+main:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.34;background-image:repeating-linear-gradient(90deg,transparent 0 69px,#b6ff320a 70px 71px),repeating-linear-gradient(0deg,transparent 0 69px,#b6ff320a 70px 71px)}
+body.page-home .home-explore,body .home-explore{width:100%!important;max-width:none!important;margin:0!important;padding:85px max(28px,calc((100vw - 1340px)/2)) 120px!important;background:radial-gradient(ellipse at 50% 0%,#265c1e65,transparent 75%),linear-gradient(125deg,#0a2110,#0c2413 52%,#0a1d10)!important;border-top:1px solid #9dfb4755;border-bottom:1px solid #9dfb4755;box-shadow:inset 0 0 120px #85e52c0b}
+.home-explore:before{left:0!important;right:0!important;background:linear-gradient(90deg,transparent,#b7ff56,transparent)!important}
+.home-explore-head h2{font-size:clamp(34px,5vw,70px)!important;color:#e8ffce!important}
+.home-explore-head p{font-size:16px;color:#b9dfa9!important}
+.home-explore-grid{gap:22px!important}
+.home-explore-grid a{min-height:250px!important;padding:30px!important;border:1px solid #8fdc4c77!important;border-radius:18px!important;background:radial-gradient(circle at 100% 0%,#a5ff2718,transparent 60%),linear-gradient(145deg,#19361c,#0d1d12 80%)!important;box-shadow:inset 0 1px 0 #d0ff4b22,0 12px 34px #0003!important;transition:transform .25s,border-color .25s,box-shadow .25s!important}
+.home-explore-grid a:hover{transform:translateY(-8px)!important;border-color:#b7ff58!important;box-shadow:0 18px 50px #80e52d2e,0 0 0 1px #b5ff4388!important}
+.home-explore-grid strong{font-size:clamp(23px,2vw,30px)!important;color:#f0ffdf!important}
+.home-explore-grid em{color:#c4dcb6!important}
+.home-explore-grid small{color:#baff75!important}
+.home-explore-icon{font-size:34px!important;color:#bdff5c!important}
+.home-explore-quote{color:#d0ff85!important}
+body.page-home main>.hero.current-page,.hero{background:radial-gradient(ellipse at 50% 42%,#2b692d55,transparent 68%),linear-gradient(135deg,#07190c,#112b14 50%,#07170b)!important}
+.hero:before{background:radial-gradient(ellipse at 50% 50%,#b5ff2822,transparent 65%)!important}
+main>section.current-page{background:radial-gradient(ellipse at 50% 0%,#2d70253b,transparent 65%),linear-gradient(130deg,#0a1c0e,#0e2514)!important}
+.card,.tile{box-shadow:0 10px 30px #0002;border-color:#689c4c88!important}
+.card{background:linear-gradient(140deg,#19311c,#0d1d12)!important}
+header{box-shadow:0 5px 35px #0005}
+.footer,footer{background:#08190c!important}
+@media(min-width:1500px){.home-explore-grid a{min-height:270px!important}}
+@media(max-width:650px){body.page-home .home-explore,body .home-explore{padding:60px 18px 80px!important}.home-explore-grid{gap:12px!important}.home-explore-grid a{min-height:195px!important;padding:19px!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <div id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title"><div class="portal-mist portal-mist-one" aria-hidden="true"></div><div class="portal-mist portal-mist-two" aria-hidden="true"></div><div class="entry-card"><div class="portal-frame" aria-hidden="true"><div class="portal-glow"></div><div class="portal-ring"></div><div class="portal-core">☣</div></div><div class="entry-kicker">LES ARCHIVES DES TÉNÈBRES</div><div class="entry-title" id="entry-title">SOMBRE<span>ÉCLAIR</span></div><p>Une force née de l’obscurité. Une légende portée par la corrosion.</p><button id="enter" class="pill portal-enter">Entrer dans le domaine <span aria-hidden="true">✦</span></button><div class="entry-note">Le domaine de l’Acide vous attend</div></div></div>
