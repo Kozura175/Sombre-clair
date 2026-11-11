@@ -2,13 +2,15 @@ name: Publier le site Sombre Éclair
 # GitHub Pages publie déjà automatiquement depuis la branche principale.
 # Ce workflow reste disponible uniquement pour un lancement manuel.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: pages
+  group: sombreclair-deploy
   cancel-in-progress: true
 jobs:
   deploy:
