@@ -757,6 +757,30 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:700px){section{padding:64px 17px}.title{font-size:clamp(1.8rem,8vw,2.7rem)}#preuves-katanas article,#entrainement-preuves article{padding:14px!important}}
 @media(prefers-reduced-motion:reduce){section.current-page{animation:none}#preuves-katanas article,#entrainement-preuves article,#preuves-katanas article img,#entrainement-preuves article img{transition:none}}
 
+
+/* Prestige II — finition cinématique, sans modifier les contenus RP */
+:root{--glow:#bd82ff}
+::selection{background:#a55be0;color:#fff}
+.hero{position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:170px;background:linear-gradient(transparent,#030207);pointer-events:none;z-index:1}
+.hero-inner{position:relative;z-index:2}
+.hero h1{letter-spacing:.065em;text-shadow:0 0 20px #b36fff90,0 0 65px #8236dc70,0 8px 32px #000!important}
+.hero .pill{box-shadow:0 8px 36px #7c2fc350,inset 0 1px #ffffff4d}
+.hero .pill:hover{box-shadow:0 12px 48px #a960ff6b}
+.wrap>.title::after{content:"";display:block;width:84px;height:2px;margin-top:20px;background:linear-gradient(90deg,#f0c7ff,#9d51ef,transparent);border-radius:10px;box-shadow:0 0 20px #ad5dff90}
+.card,.arsenal-card,.hq-stat{position:relative;border-radius:18px;box-shadow:0 14px 38px #0005;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:hover,.arsenal-card:hover,.hq-stat:hover{transform:translateY(-3px);box-shadow:0 20px 48px #8134bc27;border-color:#a86ad0}
+.card::after,.arsenal-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 1px 0 #ffffff13}
+.divider{background:linear-gradient(90deg,transparent,#9c5cda70,transparent);box-shadow:0 0 15px #8d3dcc27}
+#preuves-katanas article a,#entrainement-preuves article a{display:block;position:relative;overflow:hidden;border-radius:12px}
+#preuves-katanas article a::after,#entrainement-preuves article a::after{content:"AGRANDIR LA PREUVE  ↗";position:absolute;right:10px;bottom:10px;padding:8px 11px;border:1px solid #d1a3ff75;border-radius:8px;background:#0a0615df;color:#eed7ff;font:700 10px Outfit,Arial,sans-serif;letter-spacing:.09em;pointer-events:none;backdrop-filter:blur(10px)}
+#preuves-katanas article p,#entrainement-preuves article p{line-height:1.65}
+#navlinks a[aria-current="page"]{background:#b06aff20;box-shadow:inset 0 -2px 0 #ca91ff;color:#f6dfff}
+.archive-tools button{border-radius:10px}
+input,textarea,select{accent-color:#b46dff}
+@media(min-width:850px){#preuves-katanas .wrap>div:last-child,#entrainement-preuves .wrap>div:last-child{row-gap:25px}}
+@media(max-width:700px){.hero h1{letter-spacing:.025em}.wrap>.title::after{margin-top:14px}.card,.arsenal-card{border-radius:14px}}
+@media(prefers-reduced-motion:reduce){.card,.arsenal-card,.hq-stat{transition:none}}
 </style><style>
 /* ÉDITION PRESTIGE — tableau de bord et galerie */
 :root{--prestige:#c5a0ff;--prestige-edge:rgba(193,143,255,.35)}
