@@ -781,6 +781,17 @@ input,textarea,select{accent-color:#b46dff}
 @media(min-width:850px){#preuves-katanas .wrap>div:last-child,#entrainement-preuves .wrap>div:last-child{row-gap:25px}}
 @media(max-width:700px){.hero h1{letter-spacing:.025em}.wrap>.title::after{margin-top:14px}.card,.arsenal-card{border-radius:14px}}
 @media(prefers-reduced-motion:reduce){.card,.arsenal-card,.hq-stat{transition:none}}
+
+/* Tempête du Sombre Éclair — fond immersif entièrement CSS */
+body{background:#030207!important}
+body::before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse 65% 65% at 12% 18%,#351052aa,transparent 75%),radial-gradient(ellipse 52% 48% at 92% 72%,#43126788,transparent 78%),radial-gradient(ellipse 58% 45% at 52% 115%,#1d0b36,transparent 80%),linear-gradient(145deg,#030207,#0b0614 52%,#030207);animation:storm-breathe 14s ease-in-out infinite alternate}
+body::after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:radial-gradient(#d3a2ff55 .8px,transparent 1px),linear-gradient(125deg,transparent 46%,#a04bff12 49.8%,#d8b4ff23 50%,#9e4aff0d 50.2%,transparent 54%),linear-gradient(62deg,transparent 49.7%,#bb79ff14 50%,transparent 50.3%);background-size:33px 33px,1050px 1050px,850px 850px;background-position:0 0,center -230px,right 80px;mask-image:linear-gradient(180deg,#000c,#0009 65%,#0005);animation:storm-drift 38s linear infinite}
+@keyframes storm-breathe{0%{filter:brightness(.8);transform:scale(1)}100%{filter:brightness(1.28);transform:scale(1.07)}}
+@keyframes storm-drift{0%{background-position:0 0,center -230px,right 80px}100%{background-position:100px 170px,center -230px,right 80px}}
+.hero{background:radial-gradient(ellipse 55% 50% at 50% 35%,#62249b36,transparent 80%),linear-gradient(180deg,#05020b00,#0905125c)!important}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0,transparent 169px,#b879ff09 170px,transparent 171px);mask-image:linear-gradient(180deg,transparent,#0009 50%,transparent)}
+#preuves-katanas,#entrainement-preuves,#sommaire,#identite,#pouvoir,#parcours,#patrouilles,#rapports{background:transparent!important}
+@media(prefers-reduced-motion:reduce){body::before,body::after{animation:none}}
 </style><style>
 /* ÉDITION PRESTIGE — tableau de bord et galerie */
 :root{--prestige:#c5a0ff;--prestige-edge:rgba(193,143,255,.35)}
