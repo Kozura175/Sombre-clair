@@ -1018,6 +1018,9 @@ html body .card,html body .tile,html body .final,html body .illustration{backgro
 html body .hero-inner h1,html body .hero-inner p,html body .title{color:#fff4ff!important}
 html body #neon-lightning-fx,html body #electric-storm-global,html body #storm-overlay,html body #lightning{display:none!important}
 html body .hero .hero-inner::before,html body .hero .hero-inner::after{display:none!important}
+</style><style id="subtle-occasional-fx">
+#subtle-fx{position:fixed;inset:0;z-index:15;pointer-events:none;width:100%;height:100%;mix-blend-mode:screen}
+@media(prefers-reduced-motion:reduce){#subtle-fx{display:none!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
@@ -1263,4 +1266,6 @@ generate();
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initForge);}else{initForge();}
 })();
+</script><canvas id="subtle-fx" aria-hidden="true"></canvas><script>
+(()=>{const c=document.getElementById('subtle-fx');if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const x=c.getContext('2d');if(!x)return;let w,h,d,glints=[],last=0,next=performance.now()+2500;function resize(){d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0)}function draw(t){requestAnimationFrame(draw);if(t-last<35)return;last=t;x.clearRect(0,0,w,h);if(t>next){glints.push({x:Math.random()*w,y:Math.random()*h,t,duration:1100+Math.random()*600,r:12+Math.random()*22});next=t+3500+Math.random()*5000}glints=glints.filter(g=>t-g.t<g.duration);for(const g of glints){const p=(t-g.t)/g.duration,a=Math.sin(Math.PI*p)*.65;x.save();x.translate(g.x,g.y);x.strokeStyle='rgba(240,235,255,'+a+')';x.shadowColor='#b9d8ff';x.shadowBlur=17;x.lineWidth=1.8;x.beginPath();x.moveTo(-g.r,0);x.lineTo(g.r,0);x.moveTo(0,-g.r);x.lineTo(0,g.r);x.stroke();x.restore()}}addEventListener('resize',resize,{passive:true});resize();requestAnimationFrame(draw)})();
 </script></body></html>
