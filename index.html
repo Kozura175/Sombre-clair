@@ -914,6 +914,12 @@ body.eclipse-mode .hero{filter:none!important}
 .hero{height:calc(100svh - 65px)!important;min-height:620px!important;aspect-ratio:auto!important;background-size:cover!important;background-position:center 100%!important}
 @media(min-width:1100px){.hero{background-size:110% auto!important;background-position:center bottom!important}}
 @media(max-width:700px){.hero{height:calc(100svh - 58px)!important;min-height:510px!important;aspect-ratio:auto!important;background-size:auto 112%!important;background-position:48% bottom!important}}
+
+/* Netteté: ne pas suragrandir artificiellement l'image source */
+.hero{background-size:cover!important;background-position:center bottom!important;image-rendering:auto!important;filter:none!important;transform:none!important}
+.hero:before,.hero:after{display:none!important}
+@media(min-width:1100px){.hero{background-size:cover!important;background-position:center bottom!important}}
+@media(max-width:700px){.hero{background-size:cover!important;background-position:48% bottom!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
