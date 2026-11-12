@@ -1005,6 +1005,19 @@ footer{background:linear-gradient(95deg,#8d3bdb,#b94fe5,#4c8de2)!important;color
 #entry .entry-card{background:linear-gradient(130deg,#9c46dc,#d76be9)!important}
 a:focus-visible,button:focus-visible{outline-color:#fff!important}
 /* Ne pas toucher à la bannière déjà validée. */
+</style><style id="electric-full-page-2026">
+/* Fond électrique permanent sur la page entière, pas uniquement sur les cartes. */
+html{background:#963ee6!important}
+html body{background:linear-gradient(115deg,#b743ef 0%,#ed6df2 25%,#8656e9 50%,#4cbcf5 75%,#c94ff1 100%) fixed!important;background-size:100% 100%!important;min-height:100vh}
+html body::before{content:""!important;display:block!important;position:fixed!important;inset:0!important;z-index:0!important;pointer-events:none!important;background:radial-gradient(circle at 12% 30%,#ffb4fa77,transparent 35%),radial-gradient(circle at 85% 60%,#7eeaff77,transparent 40%)!important}
+html body::after{content:""!important;display:block!important;position:fixed!important;inset:0!important;z-index:0!important;pointer-events:none!important;opacity:.6!important;background-image:linear-gradient(115deg,transparent 47%,#ffffff70 49%,#d987ff 50%,transparent 52%),linear-gradient(70deg,transparent 48%,#77e9ff70 49.7%,transparent 51%)!important;background-size:360px 480px,490px 620px!important;animation:electric-background-drift 20s linear infinite alternate!important}
+@keyframes electric-background-drift{to{background-position:130px -140px,-120px 110px}}
+html body main,html body section,html body .wrap{position:relative;z-index:1}
+html body section,html body section:nth-of-type(even){background:linear-gradient(125deg,#ad42e8b8,#df6ce8a6 50%,#50b4f0a8)!important}
+html body .divider{background:linear-gradient(90deg,transparent,#fff0ff,transparent)!important;box-shadow:0 0 17px #f9a4ff}
+html body .card,html body .tile,html body .final,html body .illustration{background:linear-gradient(135deg,#9d47e6ed,#d66aeeed,#678ceeed)!important}
+#electric-storm-global{position:fixed;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;opacity:.82;mix-blend-mode:screen}
+@media(prefers-reduced-motion:reduce){html body::after{animation:none!important}#electric-storm-global{display:none!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
@@ -1250,4 +1263,6 @@ generate();
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initForge);}else{initForge();}
 })();
+</script><canvas id="electric-storm-global" aria-hidden="true"></canvas><script>
+(()=>{const c=document.getElementById('electric-storm-global');if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const x=c.getContext('2d');if(!x)return;let w,h,d,bolts=[],last=0,next=0;function resize(){d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0)}function spawn(t){const start=w*(.08+Math.random()*.84),pts=[[start,-15]];let px=start,py=-15;for(let i=0;i<12;i++){px+=(Math.random()-.5)*65;py+=h*.055;pts.push([px,py])}bolts.push({pts,t});if(bolts.length>3)bolts.shift()}function draw(t){requestAnimationFrame(draw);if(t-last<33)return;last=t;x.clearRect(0,0,w,h);if(t>next){spawn(t);next=t+1700+Math.random()*2300}bolts=bolts.filter(b=>t-b.t<440);for(const b of bolts){const a=1-(t-b.t)/440;for(const [width,color,blur] of [[14,'rgba(208,79,255,'+a*.3+')',25],[5,'rgba(113,230,255,'+a*.7+')',14],[2,'rgba(255,255,255,'+a+')',8]]){x.beginPath();b.pts.forEach((p,i)=>i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]));x.strokeStyle=color;x.lineWidth=width;x.shadowBlur=blur;x.shadowColor='#f4b0ff';x.stroke()}}}addEventListener('resize',resize,{passive:true});resize();requestAnimationFrame(draw)})();
 </script></body></html>
