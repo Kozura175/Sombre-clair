@@ -1005,26 +1005,19 @@ footer{background:linear-gradient(95deg,#8d3bdb,#b94fe5,#4c8de2)!important;color
 #entry .entry-card{background:linear-gradient(130deg,#9c46dc,#d76be9)!important}
 a:focus-visible,button:focus-visible{outline-color:#fff!important}
 /* Ne pas toucher à la bannière déjà validée. */
-</style><style id="electric-full-page-2026">
-/* Fond électrique permanent sur la page entière, pas uniquement sur les cartes. */
-html{background:#963ee6!important}
-html body{background:linear-gradient(115deg,#b743ef 0%,#ed6df2 25%,#8656e9 50%,#4cbcf5 75%,#c94ff1 100%) fixed!important;background-size:100% 100%!important;min-height:100vh}
-html body::before{content:""!important;display:block!important;position:fixed!important;inset:0!important;z-index:0!important;pointer-events:none!important;background:radial-gradient(circle at 12% 30%,#ffb4fa77,transparent 35%),radial-gradient(circle at 85% 60%,#7eeaff77,transparent 40%)!important}
-html body::after{content:""!important;display:block!important;position:fixed!important;inset:0!important;z-index:0!important;pointer-events:none!important;opacity:.6!important;background-image:linear-gradient(115deg,transparent 47%,#ffffff70 49%,#d987ff 50%,transparent 52%),linear-gradient(70deg,transparent 48%,#77e9ff70 49.7%,transparent 51%)!important;background-size:360px 480px,490px 620px!important;animation:electric-background-drift 20s linear infinite alternate!important}
-@keyframes electric-background-drift{to{background-position:130px -140px,-120px 110px}}
-html body main,html body section,html body .wrap{position:relative;z-index:1}
-html body section,html body section:nth-of-type(even){background:linear-gradient(125deg,#ad42e8b8,#df6ce8a6 50%,#50b4f0a8)!important}
-html body .divider{background:linear-gradient(90deg,transparent,#fff0ff,transparent)!important;box-shadow:0 0 17px #f9a4ff}
-html body .card,html body .tile,html body .final,html body .illustration{background:linear-gradient(135deg,#9d47e6ed,#d66aeeed,#678ceeed)!important}
-#electric-storm-global{position:fixed;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;opacity:.82;mix-blend-mode:screen}
-@media(prefers-reduced-motion:reduce){html body::after{animation:none!important}#electric-storm-global{display:none!important}}
-</style><style id="magenta-branching-lightning-effects">
-#neon-lightning-fx{position:fixed;inset:0;z-index:12;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen}
-body::selection{background:#ff7cff;color:#fff}
-.card,.tile,.pill,.title,.brand{transition:filter .3s,box-shadow .3s}
-.card:hover,.tile:hover{box-shadow:0 0 18px #ff7bff,0 0 45px #ad43ff99!important;filter:brightness(1.15)}
-.title,.brand{text-shadow:0 0 12px #ff91f9,0 0 26px #ae3aff!important}
-@media(prefers-reduced-motion:reduce){#neon-lightning-fx{display:none!important}}
+</style><style id="remove-black-and-pink-lightning-final">
+/* Fond violet lumineux comme la bannière, partout, même derrière les titres. */
+:root{--bg:#9335d7!important;--panel:#b85be8!important;--border:#f0b1ff!important;--white:#fff5ff!important;--muted:#f5ddff!important}
+html,html body{background:#9d40e0!important;color:#fff7ff!important}
+html body{background-image:linear-gradient(125deg,#8f35dc 0%,#d85cf0 32%,#a74ce6 65%,#6d9bf0 100%)!important;background-attachment:fixed!important}
+html body main,html body main>section,html body section,html body .wrap,html body .hero-inner{background-color:transparent!important}
+html body main>section:not(.hero),html body section:not(.hero),html body section:nth-of-type(even){background:linear-gradient(120deg,#a64ae6dd,#d965efc9 55%,#7d76e8dd)!important}
+html body .hero{background-image:url("La%20puissance%20des%20t%C3%A9n%C3%A8bres%20_%20%C3%A9clair%20sombre.png")!important;background-color:#a446e3!important}
+html body header,html body .nav,html body footer,html body .links.open{background:#a147dd!important;border-color:#e9a4ff!important}
+html body .card,html body .tile,html body .final,html body .illustration{background:linear-gradient(130deg,#b453e9,#db70ef,#8d78eb)!important;border-color:#e9b1ff!important}
+html body .hero-inner h1,html body .hero-inner p,html body .title{color:#fff4ff!important}
+html body #neon-lightning-fx,html body #electric-storm-global,html body #storm-overlay,html body #lightning{display:none!important}
+html body .hero .hero-inner::before,html body .hero .hero-inner::after{display:none!important}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
@@ -1270,14 +1263,4 @@ generate();
 }
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initForge);}else{initForge();}
 })();
-</script><canvas id="electric-storm-global" aria-hidden="true"></canvas><script>
-(()=>{const c=document.getElementById('electric-storm-global');if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const x=c.getContext('2d');if(!x)return;let w,h,d,bolts=[],last=0,next=0;function resize(){d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0)}function spawn(t){const start=w*(.08+Math.random()*.84),pts=[[start,-15]];let px=start,py=-15;for(let i=0;i<12;i++){px+=(Math.random()-.5)*65;py+=h*.055;pts.push([px,py])}bolts.push({pts,t});if(bolts.length>3)bolts.shift()}function draw(t){requestAnimationFrame(draw);if(t-last<33)return;last=t;x.clearRect(0,0,w,h);if(t>next){spawn(t);next=t+1700+Math.random()*2300}bolts=bolts.filter(b=>t-b.t<440);for(const b of bolts){const a=1-(t-b.t)/440;for(const [width,color,blur] of [[14,'rgba(208,79,255,'+a*.3+')',25],[5,'rgba(113,230,255,'+a*.7+')',14],[2,'rgba(255,255,255,'+a+')',8]]){x.beginPath();b.pts.forEach((p,i)=>i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]));x.strokeStyle=color;x.lineWidth=width;x.shadowBlur=blur;x.shadowColor='#f4b0ff';x.stroke()}}}addEventListener('resize',resize,{passive:true});resize();requestAnimationFrame(draw)})();
-</script><canvas id="neon-lightning-fx" aria-hidden="true"></canvas><script>
-(()=>{'use strict';const c=document.getElementById('neon-lightning-fx');if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const ctx=c.getContext('2d');if(!ctx)return;let w=0,h=0,dpr=1,last=0,next=0,arcs=[],particles=[];const rand=(a,b)=>a+Math.random()*(b-a);
-function resize(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*dpr;c.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
-function jagged(x,y,tx,ty,n){const pts=[];for(let i=0;i<=n;i++){const t=i/n;const off=Math.sin(Math.PI*t)*rand(-23,23);pts.push([x+(tx-x)*t+off,y+(ty-y)*t+Math.sin(Math.PI*t)*rand(-20,20)])}return pts}
-function spawn(t){const horizontal=Math.random()<.76;let x,y,tx,ty;if(horizontal){x=rand(-w*.12,w*.4);y=rand(h*.12,h*.9);tx=x+rand(w*.3,w*.85);ty=y+rand(-h*.2,h*.2)}else{x=rand(0,w);y=rand(-60,h*.3);tx=x+rand(-w*.24,w*.24);ty=y+rand(h*.28,h*.7)}const p=jagged(x,y,tx,ty,22);let branches=[];for(let k=0;k<4;k++){const i=Math.floor(rand(3,p.length-4)),q=p[i];branches.push(jagged(q[0],q[1],q[0]+rand(-140,140),q[1]+rand(-110,110),8))}arcs.push({p,branches,t,life:rand(280,600)});if(arcs.length>9)arcs.shift();for(let k=0;k<22;k++)particles.push({x:rand(x,tx),y:rand(Math.min(y,ty),Math.max(y,ty)),vx:rand(-1.8,1.8),vy:rand(-2,2),t,life:rand(400,1000),r:rand(1,3)})}
-function stroke(pts,width,color,blur){ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.strokeStyle=color;ctx.lineWidth=width;ctx.shadowBlur=blur;ctx.shadowColor='#ff37e9';ctx.lineJoin='round';ctx.lineCap='round';ctx.stroke()}
-function draw(t){requestAnimationFrame(draw);if(t-last<30)return;last=t;ctx.clearRect(0,0,w,h);if(t>next){spawn(t);next=t+rand(450,950)}arcs=arcs.filter(a=>t-a.t<a.life);for(const a of arcs){const alpha=Math.pow(1-(t-a.t)/a.life,1.1);for(const p of [a.p,...a.branches]){const k=p===a.p?1:.6;stroke(p,20*k,'rgba(184,31,255,'+(alpha*.3)+')',36);stroke(p,9*k,'rgba(255,35,221,'+(alpha*.66)+')',20);stroke(p,3*k,'rgba(255,167,253,'+(alpha*.94)+')',10);stroke(p,1.1*k,'rgba(255,255,255,'+alpha+')',5)}}particles=particles.filter(p=>t-p.t<p.life);for(const p of particles){const a=1-(t-p.t)/p.life;ctx.beginPath();ctx.arc(p.x+p.vx*(t-p.t)*.05,p.y+p.vy*(t-p.t)*.05,p.r,0,Math.PI*2);ctx.fillStyle='rgba(255,189,255,'+a+')';ctx.shadowBlur=14;ctx.shadowColor='#ff55ff';ctx.fill()}ctx.shadowBlur=0}
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)next=performance.now()+200});addEventListener('resize',resize,{passive:true});resize();requestAnimationFrame(draw)})();
 </script></body></html>
