@@ -893,41 +893,18 @@ footer{border-top:1px solid #b17aff30}
 .shiyo-opening-portrait figcaption{padding:11px 7px 6px;color:#e5c9ff;font:700 .68rem Cinzel,Georgia,serif;letter-spacing:.1em;text-align:center}
 @media(max-width:600px){.shiyo-opening-portrait{width:min(100%,285px)}.shiyo-opening-portrait img{height:260px}}
 </style><style id="hero-side-characters">
-/* Bannière complète : dimensions calées sur l'image 16:9, sans recadrage ni voile gris */
-#storm-clouds{display:none!important}
-.hero{position:relative!important;isolation:isolate!important;overflow:hidden!important;display:block!important;width:100%!important;min-height:0!important;height:auto!important;aspect-ratio:16/9!important;padding:0!important;margin:0!important;background:#07040e!important}
-.hero-side-art,.hero .ambient-nebula,.hero .acid-bubbles{display:none!important}
-.hero:before{content:"";position:absolute!important;inset:0!important;z-index:0!important;width:100%!important;height:100%!important;min-height:0!important;pointer-events:none!important;background-image:url("Affiche%20n%C3%A9on%20du%20ch%C3%A2teau%20des%20t%C3%A9n%C3%A8bres.png")!important;background-position:center center!important;background-size:100% 100%!important;background-repeat:no-repeat!important;filter:brightness(.94) contrast(1.07) saturate(1.06)!important;opacity:1!important}
-.hero:after{content:"";position:absolute!important;inset:0!important;z-index:0!important;left:0!important;bottom:0!important;width:100%!important;height:100%!important;transform:none!important;box-shadow:none!important;pointer-events:none!important;background:linear-gradient(180deg,transparent 0%,transparent 87%,#07040e99 100%)!important}
-.hero-inner{position:relative!important;z-index:2!important;max-width:none!important;width:100%!important;min-height:0!important;height:100%!important;aspect-ratio:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-end!important;padding:0 16px clamp(12px,2vw,28px)!important;box-sizing:border-box!important}
+/* Image néon directement sur l'accueil, sans aucun filtre ni voile */
+#storm-clouds,#eclipse-aura,#eclipse-toggle{display:none!important}
+.hero,.hero:before,.hero:after{filter:none!important;opacity:1!important;mix-blend-mode:normal!important}
+.hero{position:relative!important;isolation:isolate!important;display:block!important;overflow:hidden!important;box-sizing:border-box!important;width:100%!important;min-height:0!important;height:auto!important;aspect-ratio:16/9!important;padding:0!important;margin:0!important;background:#090414 url("Affiche%20n%C3%A9on%20du%20ch%C3%A2teau%20des%20t%C3%A9n%C3%A8bres.png") center center / 100% 100% no-repeat!important}
+.hero:before,.hero:after{display:none!important;content:none!important;background:none!important}
+.hero-side-art,.hero .ambient-nebula,.hero .acid-bubbles,.hero .moon-scene{display:none!important}
+.hero-inner{position:relative!important;z-index:2!important;max-width:none!important;width:100%!important;min-height:0!important;height:100%!important;aspect-ratio:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-end!important;padding:0 16px clamp(12px,2vw,28px)!important;box-sizing:border-box!important;background:none!important}
 .hero-inner .emblem-stage,.hero-inner .eyebrow,.hero-inner .hero-rank,.hero-inner h1,.hero-inner>p{display:none!important}
-.hero-inner .pill{position:relative!important;margin:0 auto!important;background:#140b23d9!important;border:1px solid #d3a8ff99!important;box-shadow:0 0 26px #6c2d9c66!important;backdrop-filter:blur(10px);font-size:clamp(.75rem,1.1vw,1rem)!important}
+.hero-inner .pill{position:relative!important;margin:0 auto!important;background:#190b2acb!important;border:1px solid #d79affd9!important;color:#f8e4ff!important;box-shadow:0 0 18px #ad4bff77!important}
 .hero>.excellence-panel,.hero>.recipient-panel,.hero>.hero-mark,.hero>.scroll-invite{display:none!important}
-@media(max-width:700px){.hero{aspect-ratio:4/5!important}.hero:before{background-size:auto 100%!important;background-position:center center!important;filter:brightness(.96) contrast(1.06)!important}.hero-inner{padding-bottom:18px!important}}
-
-/* Nuit mystérieuse : contraste renforcé, visages et titres préservés */
-.hero:before{filter:brightness(.77) contrast(1.16) saturate(.92)!important}
-.hero:after{background:radial-gradient(ellipse 65% 65% at 50% 45%,transparent 36%,#04020b66 100%),linear-gradient(180deg,#05030c22 0%,transparent 25%,transparent 78%,#07040eaa 100%)!important}
-.hero-inner .pill{background:#0b0716eb!important;border-color:#8c67b399!important;box-shadow:0 0 22px #6e39a04d!important}
-@media(max-width:700px){.hero:before{filter:brightness(.81) contrast(1.12) saturate(.95)!important}}
-
-/* Éclat impérial : violet électrique, magenta, bleu nuit et touches d'or */
-.hero{background:#090414!important}
-.hero:before{filter:brightness(1.02) contrast(1.13) saturate(1.38)!important}
-.hero:after{background:radial-gradient(ellipse 44% 44% at 50% 39%,#b33fff13,transparent 82%),linear-gradient(90deg,#220b3a24,transparent 24%,transparent 76%,#35104925),linear-gradient(180deg,transparent 0%,transparent 83%,#090414aa 100%)!important}
-.hero-inner .pill{background:linear-gradient(115deg,#1c0a34ed,#34104bdc,#0c1535ed)!important;border:1px solid #d79affd9!important;color:#f8e4ff!important;box-shadow:0 0 18px #ad4bff77,0 0 48px #7e2dca40,inset 0 1px #ffffff33!important}
-.hero-inner .pill:hover{box-shadow:0 0 25px #d06dffbb,0 0 70px #8a36e677!important;transform:translateY(-2px)}
-#archives-accueil{background:radial-gradient(ellipse 80% 34% at 50% 0%,#4a1b6c48,transparent 80%),linear-gradient(180deg,#090414,#0c0619 52%,#080510)!important}
-#archives-accueil h2{color:#f1d7ff!important;text-shadow:0 0 15px #b45cff99,0 0 40px #8a3ce766!important}
-#archives-accueil .home-card{border-color:#a85eff77!important;box-shadow:0 12px 38px #0008,0 0 22px #8a3ce71c!important}
-@media(max-width:700px){.hero:before{filter:brightness(.98) contrast(1.12) saturate(1.32)!important}}
-
-/* Correctif définitif : bannière néon sans filtre assombrissant */
-.hero{opacity:1!important;filter:none!important;mix-blend-mode:normal!important}
-.hero:before{filter:brightness(1.4) contrast(1.09) saturate(1.28)!important;opacity:1!important;mix-blend-mode:normal!important}
-.hero:after{display:none!important;content:none!important;background:none!important}
-.hero .hero-vignette,.hero .vignette,.hero .overlay,.hero .dark-overlay{display:none!important}
-@media(max-width:700px){.hero:before{filter:brightness(1.35) contrast(1.07) saturate(1.2)!important}}
+body.eclipse-mode .hero{background:#090414 url("Affiche%20n%C3%A9on%20du%20ch%C3%A2teau%20des%20t%C3%A9n%C3%A8bres.png") center center / 100% 100% no-repeat!important}
+@media(max-width:700px){.hero{aspect-ratio:4/5!important;background-size:auto 100%!important}.hero-inner{padding-bottom:18px!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
@@ -1060,7 +1037,7 @@ function save(){try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}ap
 toggle.addEventListener('click',()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden))});range.addEventListener('input',()=>{state.scale=Number(range.value);save()});focus.addEventListener('click',()=>{state.focus=!state.focus;save()});print.addEventListener('click',()=>{panel.hidden=true;toggle.setAttribute('aria-expanded','false');window.print()});reset.addEventListener('click',()=>{state={scale:100,focus:false};save()});document.addEventListener('click',e=>{if(!panel.hidden&&!panel.contains(e.target)&&!toggle.contains(e.target)){panel.hidden=true;toggle.setAttribute('aria-expanded','false')}});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){panel.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.focus()}});apply();
 })();
 </script><script>
-(()=>{const btn=document.getElementById('eclipse-toggle'),key='sombre-eclair-eclipse-v1';let active=false;try{active=localStorage.getItem(key)==='on'}catch(e){}function render(){document.body.classList.toggle('eclipse-mode',active);btn.setAttribute('aria-pressed',String(active));btn.textContent=active?'☀ Quitter l’Éclipse':'☾ Mode Éclipse';btn.title=active?'Revenir au thème normal':'Activer le Mode Éclipse'}btn.addEventListener('click',()=>{active=!active;try{localStorage.setItem(key,active?'on':'off')}catch(e){}render()});render()})();
+(()=>{document.body.classList.remove('eclipse-mode');try{localStorage.removeItem('sombre-eclair-eclipse-v1')}catch(e){}})();
 </script><script>
 (()=>{const progress=document.getElementById('reading-progress');let scheduled=false;function update(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?Math.min(100,scrollY/max*100):100)+'%';scheduled=false}addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update()})();
 (()=>{const root=document.getElementById('technique-explorer');if(!root)return;const items=[{tier:'Aura',name:'Puissance de Foudre / FoudreDétonante'},{tier:'Faible',name:'Foudre Lointain'},{tier:'Fort',name:'Foudre Noir'},{tier:'Puissant',name:'Assault Volt'},{tier:'Très puissant',name:'Éclairs Noir'},{tier:'Lune inférieure',name:'Orage Brûlant'},{tier:'Lune supérieure',name:'Dieu des Éclairs de feu Noir'}];const results=root.querySelector('.technique-results');const buttons=[...root.querySelectorAll('[data-tier]')];function render(tier){buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tier===tier)));results.replaceChildren();const shown=items.filter(x=>tier==='Tous'||x.tier===tier);if(!shown.length){const p=document.createElement('p');p.textContent='Aucune technique répertoriée pour ce niveau.';results.append(p);return}shown.forEach(item=>{const article=document.createElement('article');article.className='technique-result';const small=document.createElement('small');small.textContent=item.tier;const strong=document.createElement('strong');strong.textContent=item.name;article.append(small,strong);results.append(article)})}buttons.forEach(b=>b.addEventListener('click',()=>render(b.dataset.tier)));render('Tous')})();
