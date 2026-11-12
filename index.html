@@ -971,6 +971,21 @@ html body .hero .hero-inner::before,html body .hero .hero-inner::after{display:n
 html body .hero .ambient-vignette,html body .hero .ambient-nebula,html body .hero .moon-scene,html body .hero .nebula,html body .hero .ambient-grid{display:none!important}
 html body .hero-inner{position:relative!important;z-index:2!important;background:transparent!important;box-shadow:none!important}
 html body .hero-inner .pill{background:#180923!important;color:#fff!important}
+</style><style id="force-banner-visibility">
+/* Supprime la pénombre appliquée à toute la bannière, sans éclaircir les menus. */
+html body .hero,html body.eclipse-mode .hero{
+filter:brightness(2.8) saturate(1.25)!important;
+-webkit-filter:brightness(2.8) saturate(1.25)!important;
+background-image:url("La%20puissance%20des%20t%C3%A9n%C3%A8bres%20_%20%C3%A9clair%20sombre.png")!important;
+background-position:center!important;background-size:cover!important;
+background-blend-mode:normal!important;opacity:1!important;
+}
+html body .hero::before,html body.eclipse-mode .hero::before,
+html body .hero::after,html body.eclipse-mode .hero::after{
+display:none!important;content:none!important;opacity:0!important}
+html body .hero .hero-inner::before,html body .hero .hero-inner::after{display:none!important;content:none!important}
+html body .hero .ambient-vignette,html body .hero .ambient-nebula,html body .hero .moon-scene,html body .hero .nebula,html body .hero .ambient-grid{display:none!important}
+html body .hero-inner{background:transparent!important}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
