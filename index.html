@@ -1027,21 +1027,13 @@ html body .hero,html body.eclipse-mode .hero{
 filter:brightness(1.85) saturate(1.03) contrast(.94)!important;
 -webkit-filter:brightness(1.85) saturate(1.03) contrast(.94)!important;
 }
-</style><style id="animated-banner-gentle-20261113">
-/* Animation douce de l'image de couverture sans modifier les autres sections. */
-html body .hero,html body.eclipse-mode .hero{overflow:hidden!important;background-image:none!important;filter:none!important;-webkit-filter:none!important}
-html body .hero::before,html body.eclipse-mode .hero::before{
-content:""!important;display:block!important;position:absolute!important;
-inset:-3%!important;z-index:0!important;pointer-events:none!important;
-background-image:url("La%20puissance%20des%20t%C3%A9n%C3%A8bres%20_%20%C3%A9clair%20sombre.png")!important;
-background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
-filter:brightness(1.85) saturate(1.03) contrast(.94)!important;
-opacity:1!important;transform-origin:center!important;
-animation:banner-gentle-drift 16s ease-in-out infinite alternate!important;
-}
-html body .hero::after,html body.eclipse-mode .hero::after{content:none!important;display:none!important}
-html body .hero-inner{position:relative!important;z-index:2!important}
-@keyframes banner-gentle-drift{0%{transform:scale(1.015) translate(-.3%,0)}50%{transform:scale(1.055) translate(.45%,-.4%)}100%{transform:scale(1.025) translate(-.4%,.3%)}}
+</style><style id="visible-banner-motion-20261113">
+/* Mouvement nettement visible sur la bannière, tout en préservant le reste. */
+html body .hero,html body.eclipse-mode .hero{position:relative!important;overflow:hidden!important;background-image:none!important;filter:none!important}
+html body .hero::before,html body.eclipse-mode .hero::before{content:""!important;display:block!important;position:absolute!important;inset:-12%!important;z-index:0!important;pointer-events:none!important;background:url("La%20puissance%20des%20t%C3%A9n%C3%A8bres%20_%20%C3%A9clair%20sombre.png") center center / cover no-repeat!important;opacity:1!important;filter:brightness(1.85) saturate(1.03) contrast(.94)!important;transform-origin:center center!important;animation:visible-banner-motion 9s ease-in-out infinite alternate!important}
+html body .hero::after,html body.eclipse-mode .hero::after{display:none!important;content:none!important}
+html body .hero-inner{z-index:2!important;position:relative!important}
+@keyframes visible-banner-motion{0%{transform:translate3d(-3.5%,1.5%,0) scale(1.03)}50%{transform:translate3d(2%,-1.5%,0) scale(1.10)}100%{transform:translate3d(4%,-2%,0) scale(1.045)}}
 @media(prefers-reduced-motion:reduce){html body .hero::before,html body.eclipse-mode .hero::before{animation:none!important;transform:none!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
