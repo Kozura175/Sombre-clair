@@ -1240,6 +1240,34 @@ body .pill:hover,body button:not(.navbutton):hover{transform:translateY(-2px)!im
 @keyframes identityFloat{50%{transform:translateY(-8px)}}
 @media(max-width:780px){#identite.identity-reborn{padding:55px 15px!important}#identite .identity-layout{grid-template-columns:1fr}#identite .identity-seal{width:78px;height:78px}#identite .identity-seal span{font-size:48px}#identite .identity-profile-grid{text-align:center}}
 @media(prefers-reduced-motion:reduce){#identite .identity-seal,#identite .identity-profile-bolt,#identite .identity-status-dot{animation:none!important}#identity-sparks{display:none!important}}
+</style><style id="typography-masterpiece-20261114">
+/* Suppression définitive de la navigation à points sur le côté */
+#storm-section-rail,#storm-keyboard-hint{display:none!important;visibility:hidden!important}
+:root{--type-white:#fff8ff;--type-lavender:#f0ddff;--type-subtle:#d8b7ed}
+html{font-synthesis:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:'Outfit',system-ui,sans-serif!important;font-weight:400!important;letter-spacing:.005em!important;color:var(--type-white)!important}
+body h1,body h2,body h3,body .title,body .brand{font-family:'Cinzel',Georgia,serif!important;text-wrap:balance!important;font-kerning:normal!important}
+body h1,body h2,body .title{font-weight:700!important;letter-spacing:.025em!important;line-height:1.18!important;color:#fff7ff!important;text-shadow:0 2px 1px #230a34,0 0 16px #ba63e788!important}
+body h3{font-size:clamp(18px,1.65vw,25px)!important;font-weight:700!important;letter-spacing:.012em!important;line-height:1.35!important;color:#fceaff!important}
+body p,body li,body .lead{font-family:'Outfit',system-ui,sans-serif!important;line-height:1.78!important;letter-spacing:.007em!important;color:#f1defb!important;overflow-wrap:break-word}
+body p{font-size:clamp(14px,1.03vw,16px)!important}
+body .lead{font-size:clamp(16px,1.18vw,19px)!important;font-weight:400!important;max-width:780px}
+body strong,body b{font-weight:700;color:#fffaff}
+body .kicker,body .hq-pill,body .identity-card-eyebrow{font-family:'Outfit',sans-serif!important;letter-spacing:.16em!important;font-weight:800!important;color:#dc9dff!important}
+body .card,body .tile,body .feature{line-height:1.7!important}
+body .card h3,body .feature h3{margin-bottom:12px!important}
+body .card p,body .feature p{color:#ebd8f6!important}
+body #navlinks a{font-family:'Outfit',sans-serif!important;font-weight:600!important;letter-spacing:.02em!important;line-height:1.25!important;text-shadow:none!important}
+body button,body .pill,body .identity-cta{font-family:'Outfit',sans-serif!important;font-weight:700!important;letter-spacing:.025em!important}
+body a{text-underline-offset:4px}
+body a:not(.pill):not(.identity-cta):focus-visible{outline:2px solid #e6a8ff!important;outline-offset:3px!important}
+body input,body textarea,body select{font-family:'Outfit',sans-serif!important;font-size:15px!important;line-height:1.5!important}
+body ::selection{background:#9b42d8;color:#fff}
+#identite .identity-main-card p{font-size:clamp(15px,1.15vw,17px)!important;line-height:1.95!important;color:#f2e1ff!important}
+#identite .identity-profile-name{font-family:'Cinzel',Georgia,serif!important;font-weight:900!important;letter-spacing:.12em!important}
+#identite .identity-subtitle{font-weight:600!important;letter-spacing:.025em!important}
+#identite .identity-main-card h3{font-size:clamp(21px,2.1vw,30px)!important}
+@media(max-width:700px){body h1,body h2,body .title{overflow-wrap:anywhere}body p,body li{line-height:1.7!important}body #navlinks a{font-size:14px!important}}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">ϟ SOMBRE ÉCLAIR</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#sommaire">Sommaire</a><span class="nav-group-label">Rapports</span><a href="#preuves-katanas">Katanas</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a><a href="#rapports">Autres rapports</a><span class="nav-group-label">Univers</span><a href="#identite">Identité</a><a href="#pouvoir">Le pouvoir</a><a href="#parcours">Parcours</a><span class="nav-group-label">Outils</span><a href="forge.html">Forge des Épreuves</a><a href="#quartier-general">Quartier général</a><a href="#arsenal-rp">Arsenal RP</a></div></nav></header>
@@ -1513,4 +1541,4 @@ function schedule(){if(!pending){pending=true;requestAnimationFrame(update)}}add
 })();
 </script><script id="identity-sparks-script">
 (()=>{const section=document.getElementById('identite'),c=document.getElementById('identity-sparks');if(!section||!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;const g=c.getContext('2d');if(!g)return;let w=1,h=1,d=1,last=0,particles=[];function resize(){const r=section.getBoundingClientRect();w=r.width;h=r.height;d=Math.min(devicePixelRatio||1,2);c.width=Math.ceil(w*d);c.height=Math.ceil(h*d);g.setTransform(d,0,0,d,0,0)}function frame(t){requestAnimationFrame(frame);if(t-last<40)return;last=t;g.clearRect(0,0,w,h);const rect=section.getBoundingClientRect();if(document.hidden||rect.bottom<0||rect.top>innerHeight)return;if(Math.random()<.32)particles.push({x:Math.random()*w,y:Math.random()*h,t,life:1300+Math.random()*1600,r:.8+Math.random()*1.8});particles=particles.filter(p=>t-p.t<p.life).slice(-45);for(const p of particles){const a=(t-p.t)/p.life;g.beginPath();g.arc(p.x,p.y-a*26,p.r,0,Math.PI*2);g.fillStyle='rgba(235,173,255,'+(Math.sin(Math.PI*a)*.75)+')';g.shadowColor='#ce66ff';g.shadowBlur=13;g.fill()}g.shadowBlur=0}addEventListener('resize',resize,{passive:true});resize();requestAnimationFrame(frame)})();
-</script></body></html>
+</script><script id="remove-side-dots-script">(()=>{const r=document.getElementById('storm-section-rail');if(r)r.remove();const h=document.getElementById('storm-keyboard-hint');if(h)h.remove()})();</script></body></html>
