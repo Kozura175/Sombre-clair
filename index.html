@@ -1517,6 +1517,23 @@ footer{background:#030611!important;border-top:1px solid #315b9d!important}
 a{transition:color .2s ease,filter .2s ease}
 @media(max-width:760px){.hero-side-art{opacity:.32!important}.hero-inner{z-index:3}#accueil.hero:before{opacity:.5}}
 @media(prefers-reduced-motion:reduce){#accueil.hero:before{animation:none}*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style><style id="spectral-content-visibility-fix">
+/* Les effets de particules ne doivent jamais recouvrir le contenu du site. */
+html body #sparks,html body #storm-clouds{z-index:0!important;pointer-events:none!important}
+html body main{position:relative!important;z-index:2!important}
+html body header{position:sticky!important;top:0!important;z-index:40!important}
+html body .archive-tools,html body .archive-settings,html body .scroll-progress{z-index:41!important}
+html body main>.hero,html body main>section,html body main>.home-explore,html body main>.divider{position:relative;z-index:2}
+html body #accueil.hero{min-height:760px!important;display:grid!important;place-items:center!important;overflow:hidden!important;background:radial-gradient(ellipse at 50% 42%,#173e82aa,transparent 55%),radial-gradient(ellipse at 15% 90%,#1553a766,transparent 42%),radial-gradient(ellipse at 85% 95%,#a7183c66,transparent 40%),linear-gradient(145deg,#030817,#07152d 48%,#080611)!important}
+html body #accueil .hero-inner{display:block!important;position:relative!important;z-index:5!important;visibility:visible!important;opacity:1!important;transform:none!important;max-width:980px!important;width:min(100%,980px)!important;margin:auto!important;padding:65px 24px!important;color:#f3f7ff!important}
+html body #accueil .hero-inner>*{visibility:visible!important;opacity:1!important}
+html body #accueil .hero h1,html body #accueil .hero .eyebrow,html body #accueil .hero p{color:#f2f6ff!important}
+html body #accueil .hero h1 span{color:#ff667e!important}
+html body #accueil .spectral-leadership{display:flex!important;justify-content:center!important;gap:14px!important;flex-wrap:wrap!important}
+html body #accueil .spectral-leader{display:block!important;visibility:visible!important;opacity:1!important}
+html body #accueil .hero-rank{display:inline-flex!important;visibility:visible!important;opacity:1!important}
+html body #accueil .emblem-stage,html body #accueil .emblem{visibility:visible!important;opacity:1!important}
+html body #archives-accueil,html body main>section{position:relative!important;z-index:2!important}
 </style></head><body><a class="skip-to-content" href="#sommaire">Aller directement aux archives</a><div id="reading-progress" aria-hidden="true"></div>
 <canvas id="storm-clouds" aria-hidden="true"></canvas><canvas id="sparks" aria-hidden="true"></canvas><canvas id="lightning" aria-hidden="true"></canvas><div id="flash" aria-hidden="true"></div><div id="eclipse-aura" aria-hidden="true"></div><button type="button" id="eclipse-toggle" aria-pressed="false" title="Activer ou désactiver le Mode Éclipse">☾ Mode Éclipse</button>
 <header><nav class="nav"><a class="brand" href="#accueil">炎 FLAMME SPECTRALE</a><button class="navbutton" id="navbutton" aria-expanded="false" aria-label="Ouvrir le menu">☰</button><div class="links grouped-nav" id="navlinks"><a href="#accueil">Accueil</a><a href="#identite">Mon identité</a><a href="#pouvoir">Flamme Spectrale</a><a href="#parcours">Mon parcours</a><a href="#archives-semaine">Archives</a><a href="veilleur.html">Archives du Veilleur</a><span class="nav-group-label">Mes activités</span><a href="#preuves-katanas">Katanas</a><a href="atelier.html">Créer un entraînement</a><a href="#entrainement-preuves">Entraînements</a><a href="#patrouilles">Patrouilles</a></div></nav></header>
