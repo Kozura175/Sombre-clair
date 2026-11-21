@@ -1686,4 +1686,10 @@ main>section[id],main>.hero[id]{scroll-margin-top:95px}
 .spectral-hero-upload{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 42%!important;z-index:-1!important;display:block!important;opacity:1!important;filter:brightness(1.18) saturate(1.12)!important}
 .hero:before,.hero.current-page:before{background:linear-gradient(180deg,rgba(2,7,15,.16),rgba(2,7,15,.56))!important;z-index:0!important}
 .hero-inner,.hero-side-art,.ambient-nebula{position:relative;z-index:1}
+
+/* Image d'accueil entière : aucun recadrage, sur ordinateur comme mobile. */
+#accueil.hero{position:relative!important;overflow:hidden!important;background:#070e1b!important}
+#accueil .spectral-hero-upload{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;z-index:0!important;opacity:1!important;filter:brightness(1.08) saturate(1.08)!important}
+#accueil.hero:before,#accueil.hero:after{pointer-events:none!important}
+#accueil .hero-inner,#accueil .hero-side-art{z-index:3!important}
 </style></body></html>
